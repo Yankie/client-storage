@@ -1,0 +1,11 @@
+= simple_form_for(@shared_resource) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :path
+    = f.input :directory
+    = f.input :read
+    = f.input :write
+
+  .form-actions
+    = f.button :submit

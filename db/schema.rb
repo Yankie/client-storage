@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131014201130) do
+ActiveRecord::Schema.define(version: 20131020041747) do
+
+  create_table "groups", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "groups", ["name"], name: "index_groups_on_name"
 
   create_table "roles", force: true do |t|
     t.string   "name"
@@ -23,6 +31,17 @@ ActiveRecord::Schema.define(version: 20131014201130) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], name: "index_roles_on_name"
+
+  create_table "shared_resources", force: true do |t|
+    t.string   "path"
+    t.boolean  "directory"
+    t.boolean  "read"
+    t.boolean  "write"
+    t.integer  "shares_id"
+    t.string   "shares_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -55,6 +74,13 @@ ActiveRecord::Schema.define(version: 20131014201130) do
   add_index "users", ["invitation_token"], name: "index_users_on_invitation_token", unique: true
   add_index "users", ["invited_by_id"], name: "index_users_on_invited_by_id"
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "users_groups", id: false, force: true do |t|
+    t.integer "user_id"
+    t.integer "group_id"
+  end
+
+  add_index "users_groups", ["user_id", "group_id"], name: "index_users_groups_on_user_id_and_group_id"
 
   create_table "users_roles", id: false, force: true do |t|
     t.integer "user_id"

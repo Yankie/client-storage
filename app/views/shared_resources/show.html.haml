@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Path:
+  = @shared_resource.path
+%p
+  %b Directory:
+  = @shared_resource.directory
+%p
+  %b Read:
+  = @shared_resource.read
+%p
+  %b Write:
+  = @shared_resource.write
+
+= link_to 'Edit', edit_shared_resource_path(@shared_resource)
+\|
+= link_to 'Back', shared_resources_path
