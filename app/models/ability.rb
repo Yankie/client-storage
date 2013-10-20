@@ -6,7 +6,9 @@ class Ability
     if user.has_role? :admin
       can :manage, :all
     elsif user.has_role? :manager
-      can :manage, [User, Group, Resource]
+      can :manage, [User, Group, SheredResource]
+    elsif user.has_role? :user
+      can :read, SheredResource
     end
             
     # Define abilities for the passed in user here. For example:
