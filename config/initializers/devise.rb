@@ -10,10 +10,10 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'clientstorage@evilkoala.ru'
 
   # Configure the class responsible to send e-mails.
-  # config.mailer = 'Devise::Mailer'
+  config.mailer = 'Devise::Mailer'
 
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default) and
@@ -104,7 +104,7 @@ Devise.setup do |config|
   # The period the generated invitation token is valid, after
   # this period, the invited resource won't be able to accept the invitation.
   # When invite_for is 0 (the default), the invitation won't expire.
-  # config.invite_for = 2.weeks
+  config.invite_for = 0 #2.weeks
 
   # Number of invitations users can send.
   # - If invitation_limit is nil, there is no limit for invitations, users can
@@ -114,7 +114,7 @@ Devise.setup do |config|
   # You can change invitation_limit column for some users so they can send more
   # or less invitations, even with global invitation_limit = 0
   # Default: nil
-  # config.invitation_limit = 5
+  config.invitation_limit = 0
 
   # The key to be used to check existing users when sending an invitation
   # and the regexp used to test it when validate_on_invite is not set.
@@ -123,7 +123,7 @@ Devise.setup do |config|
 
   # Flag that force a record to be valid before being actually invited
   # Default: false
-  # config.validate_on_invite = true
+  config.validate_on_invite = true
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -152,10 +152,10 @@ Devise.setup do |config|
 
   # ==> Configuration for :rememberable
   # The time the user will be remembered without asking for credentials again.
-  # config.remember_for = 2.weeks
+  config.remember_for = 2.weeks
 
   # If true, extends the user's remember period when remembered via cookie.
-  # config.extend_remember_period = false
+  config.extend_remember_period = false
 
   # Options to be passed to the created cookie. For instance, you can set
   # :secure => true in order to force SSL only cookies.
@@ -168,43 +168,43 @@ Devise.setup do |config|
   # Email regex used to validate email formats. It simply asserts that
   # one (and only one) @ exists in the given string. This is mainly
   # to give user feedback and not to assert the e-mail validity.
-  # config.email_regexp = /\A[^@]+@[^@]+\z/
+  config.email_regexp = /\A[^@]+@[^@]+\z/
 
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this
   # time the user will be asked for credentials again. Default is 30 minutes.
-  # config.timeout_in = 30.minutes
+  config.timeout_in = nil #30.minutes
 
   # If true, expires auth token on session timeout.
-  # config.expire_auth_token_on_timeout = false
+  config.expire_auth_token_on_timeout = false
 
   # ==> Configuration for :lockable
   # Defines which strategy will be used to lock an account.
   # :failed_attempts = Locks an account after a number of failed attempts to sign in.
   # :none            = No lock strategy. You should handle locking by yourself.
-  # config.lock_strategy = :failed_attempts
+  config.lock_strategy = :failed_attempts
 
   # Defines which key will be used when locking and unlocking an account
-  # config.unlock_keys = [ :email ]
+  config.unlock_keys = [ :email ]
 
   # Defines which strategy will be used to unlock an account.
   # :email = Sends an unlock link to the user email
   # :time  = Re-enables login after a certain amount of time (see :unlock_in below)
   # :both  = Enables both strategies
   # :none  = No unlock strategy. You should handle unlocking by yourself.
-  # config.unlock_strategy = :both
+  config.unlock_strategy = :both
 
   # Number of authentication tries before locking an account if lock_strategy
   # is failed attempts.
-  # config.maximum_attempts = 20
+  config.maximum_attempts = 20
 
   # Time interval to unlock the account if :time is enabled as unlock_strategy.
-  # config.unlock_in = 1.hour
+  config.unlock_in = 1.hour
 
   # ==> Configuration for :recoverable
   #
   # Defines which key will be used when recovering the password for an account
-  # config.reset_password_keys = [ :email ]
+  config.reset_password_keys = [ :email ]
 
   # Time interval you can reset your password with a reset password key.
   # Don't put a too small interval or your users won't have the time to

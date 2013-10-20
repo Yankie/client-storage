@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-ClientStorage::Application.config.secret_key_base = '39ecb28ee7317937f2d8f31a16d7c08cddd62899c29f114d9e1ce7f72194f33f9d62717c268ef8799b7c14c7dd4d3cfc6cb9bdb06c1be6e4386eb51aea425a57'
+ClientStorage::Application.config.secret_key_base = '2ce4587fd48f67b6687922cf5a7b5a2b1065369c8e6725a6cd8d28bc3af3893167330fce7cdcaa0e73909159c6618e36f1a4d7510b480a0c7d9abce9a98da7ea'
