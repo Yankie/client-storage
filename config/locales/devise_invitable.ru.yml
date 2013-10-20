@@ -1,0 +1,26 @@
+ru:
+  devise:
+    invitations:
+      send_instructions: 'По адресу %{email} было отправлено приглашение.'
+      invitation_token_invalid: "Введённый вами код приглашения не действителен!"
+      updated: "Ваш пароль изменён. Теперь вы вошли в систему."
+      no_invitations_remaining: "Больше нет приглашений"
+      invitation_removed: 'Ваше приглашение удалено.'
+      new:
+        header: "Отправка приглашения"
+        submit_button: "Отправить приглашение"
+      edit:
+        header: "Установка пароля"
+        submit_button: "Установить мой пароль"
+    mailer:
+      invitation_instructions:
+        subject: 'Инструкции по приглашению'
+        accept: "Принять приглашение"
+        displaying_correctly: "Письмо отображается некорректно? %{link}"
+        here: "сюда"
+        ignore: "Если вы не хотите принимать приглашение, проигнорируйте это письмо."
+        no_account_till: "Ваш аккаунт не будет создан, пока вы не перейдете по ссылке выше."
+        or: "или"
+        sign_up_now: "Зарегистрируйтесь сейчас &rarr;"
+        unsubscribe: "Чтобы отписаться, нажмите %{link}."
+        view_in: "Открыть его в браузере."

@@ -1,0 +1,27 @@
+ru:
+  simple_form:
+    "yes": 'Да'
+    "no": 'Нет'
+    required:
+      text: 'обязательно'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "Исправьте ошибки, пожалуйста:"
+    # Labels and hints examples
+    labels:
+      defaults:
+        username: 'Имя пользователя'
+        password: 'Пароль'
+      user:
+        new:
+          email: 'E-mail для входа.'
+        edit:
+          email: 'E-mail.'
+    hints:
+      defaults:
+        username: 'Имя пользователя для входа.'
+        password: 'Никаких специальных символов, пожалуйста.'
+
